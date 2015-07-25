@@ -1,3 +1,17 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.jumbotron{
+	/*background-image: url(http://1.bp.blogspot.com/-FnjNkZRfiHE/UQJW2WJvHYI/AAAAAAAAAJo/R5iGC4xwTIM/s640/THE+HACKER+NEWS.png);*/
+	background-image: url(https://m2.behance.net/rendition/pm/886764/disp/6a0895b1434cf150d70f374c7e34d937.jpg);
+	height: 100vh;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	h1, h2, h3{
+		color: honeydew;
+	}
+}

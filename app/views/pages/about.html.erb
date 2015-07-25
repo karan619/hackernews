@@ -1,0 +1,15 @@
+</div>
+<div id="ani" class="jumbotron animated bounceInUp">
+<span class="label btn-hg"><hr/>HackerNews<hr/></span>
+	<h2>Share your links</h2>
+	<h2>Mention job postings</h2>
+	<h3>Help your fellow hackers!</h3><span>
+	<%= link_to "Sign up", new_user_path, class: 'btn btn-hg btn-link' %> | 
+	<%= link_to "Log in", login_path, class: 'btn btn-hg btn-link' %></span>
+</div>
+<script>
+	<% if session[:user_id].nil? %>
+		$('#myNav').remove();
+		$('.container').remove();
+	<% end %>
+</script>
