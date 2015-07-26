@@ -1,10 +1,7 @@
-<div class="login-screen">
-  <div class="login-icon">
-    <i class="fa fa-user-plus fa-5x"></i>
-    <h4>Welcome,<small>Hacker</small></h4>
-  </div>
 
-  <%= form_for(:session, url: login_path, html: {class: 'login-form'}) do |f| %>
+
+<div class="row">
+  <%= form_for(:session, url: login_path, html: {class: 'login-form col-md-6 col-md-offset-3'}) do |f| %>
     <div class="form-group">
       <%= f.text_field :email, class: "form-control login-field", placeholder: "Enter your email" %>
       <label class="login-field-icon"><i class="fa fa-envelope fa-lg"></i></label>
@@ -12,12 +9,12 @@
 
     <div class="form-group">
       <%= f.password_field :password, class: "form-control login-field", placeholder: "Password" %>
-      <label class="login-field-icon"><i class="fa fa-key fa-lg fa-spin"></i></label>
+      <label class="login-field-icon"><i class="fa fa-key fa-lg"></i></label>
     </div>
 
 	<div class="form-group">
-	    <%=f.submit "Log in", class: "btn btn-primary btn-lg btn-block" %>
-	    <a class="login-link" href="#">Lost your password?</a>
-  </div>
+	    <%=f.submit "Log in", class: "btn btn-primary" %>
+	    <a class="login-link pull-right" href="#">Lost your password?</a>
   </div>
 <% end %>
+  </div>

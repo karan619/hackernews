@@ -13,8 +13,39 @@
  *= require_tree .
  *= require_self
  */
+@import "flat-ui/variables";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "flat-ui";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../assets/glyphicons-halflings-regular.eot');
+    src: url('../assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
+    url('../assets/glyphicons-halflings-regular.woff') format('woff'), 
+    url('../assets/glyphicons-halflings-regular.ttf') format('truetype'), 
+    url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+@font-face {
+    font-family: 'flat-ui-icons';
+    src: url('../assets/flat-ui-icons-regular.eot');
+    src: url('../assets/flat-ui-icons-regular.eot?#iefix') format('embedded-opentype'), 
+    url('../assets/flat-ui-icons-regular.woff') format('woff'), 
+    url('../assets/flat-ui-icons-regular.ttf') format('truetype'), 
+    url('../assets/flat-ui-icons-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../assets/lato-black.eot');
+    src: url('../assets/lato-black.eot?#iefix') format('embedded-opentype'),  
+    url('../assets/lato-black.woff') format('woff'),  
+    url('../assets/lato-black.ttf') format('truetype'),  
+    url('../assets/lato-black.svg#latoblack') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
