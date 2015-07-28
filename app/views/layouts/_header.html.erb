@@ -3,11 +3,11 @@
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
       <span class="sr-only">Toggle navigation</span>
     </button>
-    <a class="navbar-brand" href="/"> <i class="fa fa-users"></i> ]-[acker|\|ews</a>
+    <a class="navbar-brand" href="/">]-[acker|\|ews</a>
   </div>
   <div class="collapse navbar-collapse" id="navbar-collapse-01">
     <ul class="nav navbar-nav navbar-right">
-    <% if logged_in? %>
+    <% if !session[:user_id].nil? %>
       <li class="active"><a href="#fakelink">Users</a></li>
       <li><%= link_to "Log out", logout_path, method: :delete %></li>
     <% else %>

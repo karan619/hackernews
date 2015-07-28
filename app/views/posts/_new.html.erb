@@ -1,0 +1,10 @@
+<%= form_for(@post, url: posts_path, html: {class: 'row well'}) do |f| %>
+
+<% @post.errors.full_messages.each do |e| %>
+	<p class="alert alert-danger"><%= e %></p>
+<% end %>
+
+	<%= f.text_field :label, class: ' col-md-4', placeholder: 'Label' %>
+	<%= f.text_field :link, class: ' col-md-4 col-md-offset-1', placeholder: 'URL' %>
+	<%= f.submit "Create Post!", class: 'btn btn-primary col-md-2 col-md-offset-1' %>
+<% end %>

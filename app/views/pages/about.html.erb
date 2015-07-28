@@ -1,19 +1,31 @@
 </div>
-<div id="ani" class="jumbotron animated slideInUp">
-<h4 id="hnMain" class="animated x"><hr/>HackerNews<hr/></h4>
+<div id="ani" class="jumbotron animated fadeInUp">
+<h4 id="hnMain"><hr/>HackerNews<hr/></h4>
 	<h3>Share your links,</h3>
 	<h3>Mention job postings,</h3>
 	<h3>Help your fellow hackers!</h3><span>
 	<%= link_to "Sign up", new_user_path, class: 'btn btn-hg btn-link' %>|
 	<%= link_to "Log in!", login_path, class: 'btn btn-hg btn-link' %></span>
-	<i class="fa fa-4x fa-angle-down animated infinite pulse"></i>
+	<a href="#" title="Scroll down" class="fa fa-angle-double-down fa-4x animated infinite pulse"></a>
 </div>
-<script>
-	<% if session[:user_id].nil? %>
-		$('.container').remove();
-		$('#myNav').remove();
-		window.onload=function(){
-			$('.x').removeClass('x').addClass('bounceIn');
-		};
-	<% end %>
+<span id="hid" hidden class="container">
+ <%= render 'posts/index' %> </span>
+<script id="script">
+	$('#container').remove();
+	$('#myNav').hide();
+	$('.fa').click(function(){
+		// $('html, body').animate({
+  //                       scrollTop: $("#hid").offset().top
+  //                   }, 2000);
+		$('div#ani').removeClass('animated fadeInUp').addClass('animated fadeOutUp').slideUp(1000,
+			function(){
+				alert("Links will be accessible only on Log in")
+				this.remove();
+				$('#hid').attr('hidden', false);
+			}
+		);
+		$('#hid').prepend('<div class="container">Welcome, Guest!');
+		$('#myNav').show();
+	});
 </script>
+

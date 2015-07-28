@@ -13,7 +13,7 @@
 <body>
 
 <%= render 'layouts/header' %>
-<div class="container">
+<div id="container" class="container">
 <% flash.each do |type,msg|%>
 <%= content_tag(:span, msg, class: "alert alert-#{type} animated bounceInDown", id:"alert", style: "display:absolute") %>
 <script>

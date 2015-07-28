@@ -1,0 +1,22 @@
+<div class="container-fluid">
+	<table class="table table-condensed table-hover table-striped table-bordered text-center">
+		<thead >
+			<tr>
+				<th class="text-center">Likes</th>
+				<th class="text-center">Link To</th>
+				<th class="text-center">User's Name</th>
+				<th class="text-center">Posted</th>
+			</tr>
+		</thead>
+		<tbody>
+		<% all_posts.each do |p| %>
+			<tr>
+				<td>#todo</td>
+				<td><%= link_to p.label.capitalize, logged_in? ? p.link : login_path, target: logged_in? ? '_blank' : '' %></td>
+				<td><%= p.user.name.capitalize %></td>
+				<td><%= time_ago_in_words(p.created_at) %> ago</td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+</div>
