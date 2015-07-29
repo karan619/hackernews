@@ -6,7 +6,8 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
-			redirect_to @user
+			session[:user_id] = @user.id
+			render 'posts/index'
 		end
 	end
 
