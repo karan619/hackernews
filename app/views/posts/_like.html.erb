@@ -1,0 +1,4 @@
+<%= form_for(p.likes.build, remote: true) do |f| %>
+<%= hidden_field_tag :post_id, p.id %>
+<%= f.submit "Like" %>
+<% end %>

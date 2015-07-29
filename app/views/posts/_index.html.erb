@@ -11,8 +11,11 @@
 		<tbody>
 		<% Post.all_posts.each do |p| %>
 			<tr>
-				<td>#todo</td>
-				<td><%= link_to p.label.capitalize, logged_in? ? p.link : login_path, target: logged_in? ? '_blank' : '', title: logged_in? ? "open #{p.link}" : 'Login to see the link!' %></td>
+				<td>
+					<%= render 'posts/like', p: p %>
+					<span id="login_form" class="fa fa-star fa-lg"><%= p.user_likes.count %></span>
+				</td>
+				<td><%= link_to p.label.capitalize, logged_in? ? p.link : login_path, target: logged_in? ? '_blank' : '', title: logged_in? ?  p.link : 'Login to see the link!' %></td>
 				<td><%= p.user.name.capitalize %></td>
 				<td><%= time_ago_in_words(p.created_at) %> ago</td>
 			</tr>

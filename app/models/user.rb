@@ -7,10 +7,10 @@ class User < ActiveRecord::Base
 
   before_save :downcase_email
   has_many :posts, dependent: :destroy
-  has_many :post_likes, class_name: 'Like',
+  has_many :posts_likes, class_name: 'Like',
                           foreign_key: 'user_id',
                           dependent: :destroy
-  has_many :liked_posts, through: :post_likes, source: :post
+  has_many :liked_posts, through: :posts_likes, source: :post
 
   has_secure_password
 private

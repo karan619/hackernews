@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  
+
   resources :posts, only: [:new, :create, :destroy]
+  resources :likes, only: [:create]
 
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
