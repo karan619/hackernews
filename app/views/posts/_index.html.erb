@@ -1,5 +1,7 @@
+<% unless logged_in? %>
 <div class="container-fluid">
-	<table class="table table-condensed table-hover table-striped table-bordered text-center">
+<% end %>
+	<table class="table table-condensed table-hover table-striped table-bordered text-justify">
 		<thead >
 			<tr>
 				<% if logged_in? %>
@@ -29,4 +31,6 @@
 		<% end %>
 		</tbody>
 	</table>
+<%  unless logged_in? %>
 </div>
+<% end %>

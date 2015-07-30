@@ -11,13 +11,17 @@
 <span id="hid" hidden class="container">
  <%= render 'posts/index' %> </span>
 <script id="script">
+	window.onload = function() {
+		$('#footer').hide();
+	}
+	$('#footer').hide();
 	$('#container').remove();
 	$('#myNav').hide();
 	$('.fa').click(function(){
 		// $('html, body').animate({
   //                       scrollTop: $("#hid").offset().top
   //                   }, 2000);
-		$('div#ani').removeClass('animated flipInX').addClass('animated flipOutX').slideUp(2000,
+		$('div#ani').removeClass('animated flipInX').addClass('animated flipOutX').show(2000,
 			function(){
 				alert("Links will be accessible only on Log in")
 				this.remove();
@@ -25,6 +29,7 @@
 			}
 		);
 		$('#myNav').show();
+		$('#footer').show();
 	});
 </script>
 

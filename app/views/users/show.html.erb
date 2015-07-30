@@ -1,4 +1,4 @@
-<blockquote class="well"><h6>Name: <%= @user.name %></h6> <h6>Email: <%= @user.email %></h6></blockquote>
+<blockquote class="well text-justify"><h6>Name: <%= @user.name %></h6> <h6>Email: <%= @user.email %></h6></blockquote>
 <h3><%=pluralize @posts.count, "Link" %></h3>
 <h6 class="col-md-10 col-md-offset-1">
 <% @posts.each do |p| %>

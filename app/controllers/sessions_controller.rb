@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
   	if(user && user.authenticate(params[:session][:password]))
   		session[:user_id] = user.id
       flash[:success] = "Login Successful"
-  		redirect_to root_url
+      redirect_to root_url
+      flash[:warning] = "Allow the Pop-ups to access the links!!!"
   	else
       redirect_to login_path
       flash[:danger] = "Invalid email/password"
