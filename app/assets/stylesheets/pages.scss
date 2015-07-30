@@ -15,17 +15,19 @@
 	padding: 0 !important;
 	h1, h2, h3{
 		color: honeydew;
-		margin: 10px;
+		margin-top: 10px;
+		margin-bottom: 15px;
 	}
 	h4{
 		font-style: "Comic Sans Ms";
 		color: tomato;
+		font-size: 4rem;
 	}
 	#hnMain{
 		margin: 0;
 	}
 	hr{
-		margin: 0;
+		margin: 2px;
 	}
 }
 html, body{

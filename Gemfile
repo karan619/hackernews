@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 
+gem 'faker'
 gem 'font-awesome-sass'
 
 group :production do

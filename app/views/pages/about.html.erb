@@ -1,11 +1,11 @@
 </div>
-<div id="ani" class="jumbotron animated fadeInUp">
+<div id="ani" class="jumbotron animated flipInX">
 <h4 id="hnMain"><hr/>HackerNews<hr/></h4>
 	<h3>Share your links,</h3>
 	<h3>Mention job postings,</h3>
 	<h3>Help your fellow hackers!</h3><span>
 	<%= link_to "Sign up", new_user_path, class: 'btn btn-hg btn-link' %>|
-	<%= link_to "Log in!", login_path, class: 'btn btn-hg btn-link' %></span>
+	<%= link_to "Sign in", login_path, class: 'btn btn-hg btn-link' %></span>
 	<a href="#" title="Scroll down" class="fa fa-angle-double-down fa-4x animated infinite pulse"></a>
 </div>
 <span id="hid" hidden class="container">
@@ -17,7 +17,7 @@
 		// $('html, body').animate({
   //                       scrollTop: $("#hid").offset().top
   //                   }, 2000);
-		$('div#ani').removeClass('animated fadeInUp').addClass('animated fadeOutUp').slideUp(1000,
+		$('div#ani').removeClass('animated flipInX').addClass('animated flipOutX').slideUp(2000,
 			function(){
 				alert("Links will be accessible only on Log in")
 				this.remove();
