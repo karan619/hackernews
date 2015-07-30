@@ -8,9 +8,11 @@ end
   def create
   	@post = current_user.posts.build(post_params)
   	if @post.save
-		redirect_to root_url
-  		flash[:succeess] = "created new posts"
-	end
+  		flash.now[:succeess] = "created new posts"
+		render 'posts/new'
+	else
+		render 'posts/new'
+  	end
 
   end
 

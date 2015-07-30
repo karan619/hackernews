@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'mylikes' => 'users#mylikes'
+  get 'myposts' => 'users#myposts'
+
   resources :posts, only: [:new, :create, :destroy]
   resources :likes, only: [:create]
 

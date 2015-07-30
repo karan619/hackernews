@@ -1,0 +1,10 @@
+<h3><%=pluralize current_user.posts_likes.count, "Favourite" %></h3>
+<h6 class="col-md-10 col-md-offset-1">
+<% @likes.each do |l| %> 
+<blockquote>
+<span>Label: <%= l.label %>, </span>
+<span>URL: <%= link_to l.link,l.link %></span>
+<small>Posted by: <%= l.user.name %></small>
+</blockquote>
+<% end %>
+</h6>

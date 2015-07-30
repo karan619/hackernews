@@ -1,4 +1,9 @@
-<%= form_for(p.likes.build, remote: true) do |f| %>
+<%= form_for(p.likes.build) do |f| %>
 <%= hidden_field_tag :post_id, p.id %>
-<%= f.submit "Like" %>
+<% unless current_user().liked_posts.include?(p) %>
+<%= f.submit "Favourite", class: ' btn btn-link', title: "Mark as Favourite" %>
+<% else %>
+<%= link_to "Favourated", '#', class: "btn btn-disabled" %>
+<% end %>
+
 <% end %>

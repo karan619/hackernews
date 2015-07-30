@@ -7,8 +7,9 @@
   </div>
   <div class="collapse navbar-collapse" id="navbar-collapse-01">
     <ul class="nav navbar-nav navbar-right">
+    <li class="active"><%= link_to "My Favourites", mylikes_path %></li>
+    <li class="active"><%= link_to "My Links", myposts_path %></li>
     <% if !session[:user_id].nil? %>
-      <li class="active"><a href="#fakelink">Users</a></li>
       <li><%= link_to "Log out", logout_path, method: :delete %></li>
     <% else %>
       <li><%= link_to "Log in", login_path %></li>

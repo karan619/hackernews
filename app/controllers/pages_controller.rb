@@ -5,6 +5,7 @@ class PagesController < ApplicationController
 	else
 		@post = current_user.posts.build
 		@posts = Post.all.order(:created_at)
+		render 'posts/new'
 	end
   end
 

@@ -1,10 +1,9 @@
-<h1 class="well">Name: <%= @user.name %> | Email: <%= @user.email %></h1>
 <h3><%=pluralize @posts.count, "Link" %></h3>
 <h6 class="col-md-10 col-md-offset-1">
 <% @posts.each do |p| %>
 <blockquote>
 <span>Label: "<%= p.label %>", </span>
-<span>URL: <%= link_to p.link, p.link %></span>
+<span>URL: <%= link_to p.link,p.link %></span>
 <small><%= pluralize p.user_likes.count, "Favourite" %></small>
 <small>Posted: <%= time_ago_in_words(p.created_at) %> ago.</small>
 </blockquote>

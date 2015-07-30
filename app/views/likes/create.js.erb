@@ -1,1 +1,3 @@
-$("#login_form").html("<%= escape_javascript(@post.user_likes.count) %>");
+<% render 'posts/new' %>
+$("span#login_form").html("<%= escape_javascript(p.user_likes.count) %>");
+alert(@post.user_likes.count);
